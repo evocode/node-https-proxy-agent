@@ -343,7 +343,8 @@ describe('HttpsProxyAgent', function() {
 			opts.port = 80;
 			opts.agent = agent;
 
-			http.get(opts);
+			let = req = http.get(opts);
+			req.once('error', function(err) {});
 		});
 	});
 
